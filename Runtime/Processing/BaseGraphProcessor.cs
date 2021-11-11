@@ -20,11 +20,14 @@ namespace GraphProcessor
 		/// Manage graph scheduling and processing
 		/// </summary>
 		/// <param name="graph">Graph to be processed</param>
-		public BaseGraphProcessor(BaseGraph graph)
+		public BaseGraphProcessor(BaseGraph graph, bool updateComputeOrder = true)
 		{
 			this.graph = graph;
 
-			UpdateComputeOrder();
+			if (updateComputeOrder)
+			{
+				UpdateComputeOrder();
+			}
 		}
 
 		public abstract void UpdateComputeOrder();

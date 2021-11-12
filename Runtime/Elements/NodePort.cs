@@ -44,6 +44,8 @@ namespace GraphProcessor
 		/// </summary>
 		public bool		vertical;
 
+		public string customIdentifier;
+
         public bool Equals(PortData other)
         {
 			return identifier == other.identifier
